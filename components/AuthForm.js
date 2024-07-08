@@ -22,10 +22,25 @@ export default function AuthForm({ isLogin }) {
 
     return (
         <View>
-            <Input label="Email" keyboardType="email-address" onUpdateValue={updateInput.bind(this, 'email')} value={enteredEmail} />
-            <Input label="Şifre" secure onUpdateValue={updateInput.bind(this, 'password')} value={ enteredPassword} />
+            <Input label="Email" keyboardType="email-address" onUpdateValue={updateInput.bind(this, 'email')} value={enteredEmail} style={styles.input}/>
+            <Input label="Şifre" secure onUpdateValue={updateInput.bind(this, 'password')} value={enteredPassword} style={styles.input}/>
         </View>
     )
 }
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+    input: {
+        width: '100%',
+        marginVertical: 10,
+        padding: 15,
+        borderRadius: 10,
+        borderColor: '#ccc',
+        borderWidth: 1,
+        backgroundColor: '#fff',
+    },
+    label: {
+        fontSize: 16,
+        color: '#333',
+        marginBottom: 5,
+    },
+})
